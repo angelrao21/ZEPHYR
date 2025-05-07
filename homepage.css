@@ -1,0 +1,842 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Navigation */
+.navbar {
+  background: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+}
+
+.nav-container {
+  max-width: 1280px;
+  height:30px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-image {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.nav-logo span {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+
+}
+
+.nav-links a {
+  color:red;
+  text-decoration: none;
+  transition: color 0.2s;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: #111827;
+}
+
+.sign-in-btn {
+  background: #3a8ab2;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.7rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.sign-in-btn:hover {
+  background: #3a8ab2;
+}
+
+.menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  display: none;
+  background: white;
+  padding: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.mobile-menu a {
+  display: block;
+  padding: 0.5rem 0;
+  color: #4b5563;
+  text-decoration: none;
+}
+
+.mobile-menu .sign-in-btn {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 500px;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-content {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+}
+
+.hero h1 {
+  color: white;
+  font-size: 3.75rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.hero p {
+  color: white;
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+}
+
+/* New Search Container Styles */
+.search-container {
+  display: flex;
+  gap: 1rem;
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 1000px;
+  width: 100%;
+  height: 300px;
+  margin-top: 0.0001rem;
+}
+
+.search-section,
+.explore-section {
+  flex: 1;
+  min-width: 200px; /* Prevents overflow on smaller screens */
+}
+
+.search-section h2,
+.explore-section h2 {
+  color: #1f2937;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.search-box {
+  display: flex;
+  flex-direction: column; /* important: stack input and suggestions vertically */
+  position: relative;     /* important: so suggestions position inside it */
+  background: #f3f4f6;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
+.search-box input {
+  padding: 12px 15px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  width: 100%;
+}
+
+
+
+.autocomplete-results {
+  position: absolute;
+  background: white;
+  border: 1px solid #ccc;
+  max-height: 200px;
+  overflow-y: auto;
+  width: 100%;
+  z-index: 10;
+}
+
+.autocomplete-item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.autocomplete-item:hover {
+  background-color: #f0f0f0;
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  color: #6b7280;
+}
+
+.search-box input {
+  flex: 1;
+  border: none;
+  background: none;
+  padding: 0.5rem;
+  font-size: 1rem;
+  outline: none;
+}
+
+.search-btn {
+  background: #dc2626;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.search-btn:hover {
+  background: #b91c1c;
+}
+.suggestion-box {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #ccc;
+  border-top: none; /*remove double border between input and suggestions*/
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 8px 8px;
+}
+
+.suggestion-box div {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.suggestion-box div:hover {
+  background-color: #f0f0f0;
+}
+
+
+.explore-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.explore-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #4b5563;
+  text-decoration: none;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s;
+}
+
+.explore-link:hover {
+  background: #f3f4f6;
+  color: #111827;
+}
+
+.explore-link i {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 800px;
+  border-radius: 8px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: black;
+}
+
+/* Locations Dropdown Styles */
+.locations-dropdown {
+  display: none;
+  position: absolute;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  width: 350px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.locations-content {
+  padding: 1.5rem;
+}
+
+.locations-content h3 {
+  color: #1f2937;
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.location-category {
+  margin-bottom: 1.5rem;
+}
+
+.location-category h4 {
+  color: #1f2937;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.location-category ul {
+  list-style: none;
+  margin-left: 0.5rem;
+}
+
+.location-category li {
+  padding: 0.5rem;
+  color: #4b5563;
+  cursor: pointer;
+  transition: all 0.2s;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+.location-category li:hover {
+  background-color: #f3f4f6;
+  color: #111827;
+  padding-left: 1rem;
+}
+
+/* Features Section */
+.features {
+  padding: 4rem 1rem;
+  background: #f9fafb;
+}
+
+.features h2 {
+  text-align: center;
+  font-size: 1.875rem;
+  font-weight: bold;
+  margin-bottom: 3rem;
+}
+
+.features-grid {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.feature-card {
+  background: white;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card img {
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.feature-card p {
+  color: #4b5563;
+}
+
+/* Footer */
+footer {
+  background: #f3f3f3;
+  padding: 40px 20px 0;
+  font-size: 1em;
+  color: #333;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 200px;
+  margin-bottom: 20px;
+}
+
+.footer-column h4 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-column p {
+  margin: 6px 0;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 1.5em;
+  padding: 0 20px 20px;
+}
+
+.bottom-bar {
+  background: #444;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-style: italic;
+  width:100%;
+}
+.social-icons a {
+  color: #444;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #007bff;
+}
+
+/* Contact Popup Styles */
+#contact-popup {
+  display: none;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  width: 250px;
+  text-align: center;
+}
+
+#contact-popup h3 {
+  margin: 0 0 0.5rem 0;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+#contact-popup p {
+  margin: 0.5rem 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+#contact-popup .fas {
+  color: #3a8ab2;
+  margin-right: 8px;
+}
+
+#close-popup {
+  background-color: #3a8ab2;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  transition: background-color 0.2s;
+}
+
+#close-popup:hover {
+  background-color: #357abd;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .search-container {
+    max-width: 90%;
+  }
+  
+  .footer-container {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .mobile-menu.active {
+    display: block;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .search-container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-content {
+    width: 95%;
+    margin: 10% auto;
+  }
+
+  .locations-dropdown {
+    width: 100%;
+    max-height: 70vh;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    border-radius: 12px 12px 0 0;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .locations-content {
+    padding: 1rem;
+  }
+
+  .location-category {
+    margin-bottom: 1rem;
+  }
+
+  .location-category li {
+    padding: 0.75rem;
+  }
+
+  /* Additional tablet improvements */
+  body {
+    overflow-x: hidden;
+  }
+  
+  .nav-container {
+    padding: 0 1rem;
+  }
+  
+  .hero h1 {
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .hero p {
+    max-width: 90%;
+  }
+  
+  .search-container {
+    height: auto;
+    min-height: 350px;
+  }
+}
+
+/* Medium phones (iPhone Plus, Pixel, etc.) */
+@media (max-width: 576px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+  
+  .hero {
+    min-height: 300px;
+  }
+  
+  .explore-link {
+    padding: 0.75rem 0.5rem;
+  }
+  
+  .feature-card {
+    margin: 0 auto;
+    max-width: 90%;
+  }
+  
+  .social-icons {
+    justify-content: center;
+  }
+}
+
+/* iPhone and Small Mobile Optimization */
+@media (max-width: 430px) {
+  body, html {
+    font-size: 16px;
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  /* Navigation adjustments */
+  .nav-container {
+    height: auto;
+    padding: 0.5rem 0;
+  }
+
+  .logo-image {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* Hero section adjustments */
+  .hero {
+    height: auto;
+    min-height: 350px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  /* Search container adjustments */
+  .search-container {
+    padding: 1rem;
+    height: auto;
+    min-height: 400px;
+  }
+
+  .search-section h2,
+  .explore-section h2 {
+    font-size: 1.2rem;
+  }
+
+  /* Feature cards */
+  .feature-card {
+    padding: 1rem;
+  }
+
+  .feature-card img {
+    height: 8rem;
+  }
+
+  /* Footer adjustments */
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-column {
+    margin-bottom: 1.5rem;
+  }
+
+  /* Additional improvements */
+  .navbar {
+    padding: 0.75rem 0.5rem;
+  }
+  
+  .nav-logo span {
+    font-size: 1.1rem;
+  }
+  
+  .search-container {
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .search-box {
+    padding: 0.35rem;
+  }
+  
+  .search-btn {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  
+  .locations-content h3 {
+    font-size: 1.1rem;
+  }
+  
+  .location-category h4 {
+    font-size: 1rem;
+  }
+  
+  .location-category li {
+    font-size: 0.9rem;
+  }
+  
+  .modal-content {
+    padding: 15px;
+  }
+  
+  .features {
+    padding: 2rem 0.5rem;
+  }
+  
+  .features h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Fix for extremely small screens */
+@media (max-width: 320px) {
+  .hero h1 {
+    font-size: 1.75rem;
+  }
+
+  .search-container {
+    min-height: 450px;
+  }
+
+  /* Enhance for tiny screens */
+  .logo-image {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .nav-logo span {
+    font-size: 1rem;
+  }
+  
+  .hero p {
+    font-size: 0.9rem;
+  }
+  
+  .search-section h2,
+  .explore-section h2 {
+    font-size: 1.1rem;
+  }
+  
+  .search-box input {
+    font-size: 0.9rem;
+  }
+  
+  .feature-card h3 {
+    font-size: 1.1rem;
+  }
+  
+  .feature-card p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Landscape orientation fixes for mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero {
+    min-height: 250px;
+  }
+  
+  .search-container {
+    flex-direction: row;
+    min-height: auto;
+    height: auto;
+    padding: 1rem;
+  }
+  
+  .hero h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .hero p {
+    margin-bottom: 1rem;
+  }
+  
+  .locations-dropdown {
+    max-height: 80vh;
+  }
+}
+
+/* Fix for notched iPhones */
+@supports (padding-top: env(safe-area-inset-top)) {
+  .navbar {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+  
+  .bottom-bar {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
