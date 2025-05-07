@@ -38,7 +38,7 @@
 
 - **Frontend**: HTML, CSS, JavaScript
 - **Mapping**: Google Maps JavaScript API
-- **Prototyping & UI/UX**: Figma (see [UI Design](#))
+- **Prototyping & UI/UX**: Figma
 
 ## 💡 Team Members
 
