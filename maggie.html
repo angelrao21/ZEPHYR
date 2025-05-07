@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maggi Point - Zephyr</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="maggie.css" />
+</head>
+<body>
+  <header>
+    <div class="top-nav">
+      <div class="logo-container">
+        <img src="IMG_4164 (1).PNG" alt="Zephyr Logo" />
+      </div>
+
+      <div class="nav-right">
+        <div class="search-container">
+          <input type="text" placeholder="Maggi Point" />
+          <button><i class="fas fa-search"></i></button>
+        </div>
+        <div class="nav-links">
+          <a href="photogallery.html">Photos</a>
+          <a href="aboutus.html">About Us</a>
+          <a href="index.html">Home</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="gallery">
+    <img src="maggie1.jpg" alt="Maggi Point Image 1">
+    <img src="maggie2.jpg" alt="Maggi Point Image 2">
+    <img src="MaggieHighlight.jpg" alt="Maggi Point Image 3">
+  </section>
+
+  <div class="route-info">
+    <div class="route-section">
+      <div><strong>FROM</strong></div>
+      <div>Kalpana Chawla Hostel</div>
+      <div style="color: red;">current location</div>
+    </div>
+    <div class="route-section">
+      <div><strong>TO</strong></div>
+      <div>Maggi Point</div>
+      <div style="color: red;">(Near North Block)</div>
+    </div>
+    <div class="route-section">
+      <div><strong>Preferred route</strong></div>
+      <div>
+        <input type="radio" name="route" checked> Shortest route
+        <input type="radio" name="route"> Less crowded
+      </div>
+    </div>
+  </div>
+
+  <section class="highlight">
+    <img src="Maggihighlight.jpeg" alt="Maggi Point Highlight">
+    <div>
+      <h2>"Warm bowls. Chilled vibes. It’s Maggi Time!"</h2>
+    </div>
+  </section>
+
+  <section class="info-map">
+    <div class="library-details-container">
+      <div class="services-offered food-details">
+        <h4>Popular Items:</h4>
+        <ul>
+          <li>Classic Masala Maggi</li>
+          <li>Cheese Maggi</li>
+          <li>Paneer Maggi</li>
+          <li>Cold Coffee & Iced Tea</li>
+        </ul>
+      </div>
+
+      <div class="Timings food-details">
+        <h4>Opening Hours</h4>
+        <p>Monday - Saturday: 9:00 AM - 8:00 PM</p>
+        <p>Closed on Sundays</p>
+      </div>
+
+ 
+    </div>
+
+    <div class="map-box">
+      <h3>Directions:</h3>
+      <iframe src="https://maps.google.com/maps?q=BML%20Munjal%20University&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0"></iframe>
+      <p id="locationText" style="margin: 10px 0; font-weight: bold; font-size: 18px;">
+        Located near North Block lawn, beside the Basketball Court
+      </p>
+      <button onclick="copyLocation()" style="width: 100%;">Copy Location</button>
+    </div>
+  </section>
+
+  <section class="recommendations">
+    <h3>Nearby Amenities</h3>
+    <div class="genre-items food-items">
+      <div><img src="dominos2.JPG" alt="Dominos"><p>Dominos</p></div>
+      <div><img src="xpress_image.jpg" alt="Washrooms"><p>Xpress</p></div>
+      <div><img src="burgersingh_image.jpg" alt="Water Dispenser"><p>Burger Singh</p></div>
+      <div><img src="E2Cafe.JPG" alt="Outdoor Seating"><p>Seating Area</p></div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="social-icons">
+      <a href="mailto:zephyrbmu@gmail.com" target="_blank">
+        <i class="fas fa-envelope"></i>
+      </a>
+      <a href="https://www.instagram.com/zephyrbmu" target="_blank">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.youtube.com/channel/UCaYSquOfBha6R5G0mMHQ8YA" target="_blank">
+        <i class="fab fa-youtube"></i>
+      </a>
+    </div>
+
+    <div class="footer-container">
+      <div class="footer-column">
+        <h4>Know more about us</h4>
+        <p>BMU Campus</p>
+        <p>Zephyr as a team</p>
+        <p>Connect to us through social media.</p>
+        <p>Team collaboration</p>
+      </div>
+
+      <div class="footer-column">
+        <h4>Explore</h4>
+        <p>Design</p>
+        <p>Prototyping</p>
+        <p>Development features</p>
+        <p>Design systems</p>
+        <p>Collaboration features</p>
+        <p>Design process</p>
+      </div>
+
+      <div class="footer-column">
+        <h4>Resources</h4>
+        <p>Blog</p>
+        <p>Colors</p>
+        <p>Support</p>
+        <p>Developers</p>
+        <p>Resource library</p>
+      </div>
+    </div>
+
+    <div class="bottom-bar">
+      <p>Copyright ©2025 Zephyr. All Rights Reserved.
+      <br>Privacy & Security | CA - Do Not Sell My Info | Site Map.</p>
+    </div>
+  </footer>
+
+  <script src="maggie.js"></script>
+</body>
+</html>
