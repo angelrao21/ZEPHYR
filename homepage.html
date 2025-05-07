@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Navigation Interface</title>
+  <link rel="stylesheet" href="homepage.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <img src="IMG_4164 (1).PNG" alt="Zephyr Logo" class="logo-image">
+        <span>Zephyr</span>
+      </div>
+      
+      <div class="nav-links">
+        <a href="photogallery.html">Photos</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="#">
+        <button class="sign-in-btn">CONTACT US</button></a>
+      </div>
+
+      <button class="menu-btn">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu">
+    <a href="photogallery.html">Photos</a>
+    <a href="feedback.html">Feedback</a>
+    <a href="aboutus.html">About Us</a>
+    <a href="#">
+    <button class="sign-in-btn">CONTACT US</button></a>
+  </div>
+
+  <div class="hero">
+    <img src="https://analyticsindiamag.com/wp-content/uploads/2015/04/Gateway-Edited_v1-1024x540.jpg" alt="University Campus">
+    <div class="hero-content">
+      <h1>Swipe. Search. Arrive.</h1>
+      <p>Ensuring seamless navigation to classrooms, offices and other key locations</p>
+      
+      <div class="search-container">
+        <div class="search-section">
+          <h2>Find Your Destination</h2>
+          <div class="search-box">
+            <button class="menu-toggle">
+              <i data-lucide="menu"></i>
+            </button>
+            <input type="text" id="searchInput" placeholder="Search a location...">
+            <div class="autocomplete-results" id="autocomplete-results"></div>
+            <button class="search-btn">
+              <i data-lucide="search"></i>
+            </button>
+          </div>
+        </div>
+        
+        <div class="explore-section">
+          <h2>Explore Zephyr</h2>
+          <div class="explore-links">
+            <a href="#" class="explore-link" id="campus-map-link">
+              <i data-lucide="map"></i>
+              Campus Map
+            </a>
+            <a href="photogallery.html" class="explore-link">
+              <i data-lucide="image"></i>
+              Photos
+            </a>
+            <a href="#" class="explore-link" id="locations-link">
+              <i data-lucide="list"></i>
+              List of Locations
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="locations-dropdown" class="locations-dropdown">
+    <div class="locations-content">
+      <h3>Campus Locations</h3>
+      
+      <div class="location-category">
+        <h4>Academic Facilities</h4>
+        <ul>
+          <li><a href="library.html">Library</li></a></li>
+          <li><a href="NB.html">North Block</a></li>
+          <li><a href="gatewaybuilding.html">Gateway Building</a></li>
+          <li><a href="reception.html">Reception</a></li>
+        </ul>
+      </div>
+
+    
+
+      <div class="location-category">
+        <h4>Student Life</h4>
+        <ul>
+          <li><a href="kch.html">Kalpana Chawla Hostel</a></li>
+          <li><a href="apj.html">APJ Abdul Kalam Hostel</a></li>
+          <li><a href="Gargi.html">Gargi Hostel</a></li>
+          <li><a href="bsh.html">Bhagat Singh Hostel</a></li>
+          <li><a href="wellness.html">Wellness Centre</a></li>
+          <li><a href="medical.html">Medical Room</a></li>
+          <li><a href="emergency.html">Emergency Gathering Area</a></li>
+          <li><a href="mailroom.html">Mail Room</a></li>
+          <li><a href="gym.html">Gym</a></li>
+        </ul>
+      </div>
+
+      <div class="location-category">
+        <h4>Food & Refreshments</h4>
+        <ul>
+          <li><a href="e2.html">E2 Cafeteria</a></li>
+          <li><a href="Q-cafe.html">Q Cafe</a></li>
+          <li><a href="smoothie.html">Smoothie Point</a></li>
+          <li><a href="maggie.html">Maggi Point</a></li>
+          <li><a href="dominos.html">Dominos</a></li>
+          <li><a href="xpress.html">Cafe Coffee Day</a></li>
+          <li><a href="burger.html">Burger Singh</a></li>
+          <li><a href="tuckshop.html">Tuckshop(KCH)</a></li>
+          <li><a href="tuckshopbsh.html"> AVS Tuckshop(BSH)</a></li>
+          <li><a href="D-cafe.html">Mess(D cafe)</a></li>
+          <li><a href="towermess.html">Mess(Tower Mess)</a></li>
+        </ul>
+      </div>
+
+      <div class="location-category">
+        <h4>Sports & Events</h4>
+        <ul>
+          <li><a href="auditorium.html">Auditorium</a></li>
+          <li><a href="MPH.html">MPH (Multi-Purpose Hall)</a></li>
+          <li><a href="PondArea.html">Pond Area</a></li>
+        </ul>
+      </div>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div id="map-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>BMU Campus Map</h2>
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3514.0376114575396!2d76.84843731507474!3d28.247235982577407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d3d2c8d4a3b6d%3A0x61c8770854b3e590!2sBML%20Munjal%20University!5e0!3m2!1sen!2sin!4v1645601877641!5m2!1sen!2sin"
+        width="100%" 
+        height="450" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy">
+      </iframe>
+    </div>
+  </div>
+
+  <div class="features">
+    <h2>Get to know your university, locate the places</h2>
+    
+    <div class="features-grid">
+      <div class="feature-card">
+        <img src="https://tse2.mm.bing.net/th?id=OIP.AJaczbGVULBAGMrM4jhKLAHaE8&pid=Api&P=0&h=180" alt="Campus Life">
+        <h3>Campus Life</h3>
+        <p>Discover the vibrant community and activities around campus.</p>
+      </div>
+
+      <div class="feature-card">
+        <img src="https://gyaanarth.com/wp-content/uploads/2021/08/BML-Munjal-University-%E2%80%93-BMU-Gurgaon2.jpg" alt="Academic Facilities">
+        <h3>Academic Facilities</h3>
+        <p>Find your way to lecture halls, libraries, and study spaces.</p>
+      </div>
+
+      <div class="feature-card">
+        <img src="https://www.dialeducation.com/assets/images/gallery/gallery_16056118253.jpg" alt="Student Services">
+        <h3>Student Services</h3>
+        <p>Locate important administrative offices and support services.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="social-icons">
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=zephyrbmu@gmail.com" target="_blank">
+        <i class="fas fa-envelope"></i>
+      </a>
+      <a href="https://www.instagram.com/zephyrbmu?igsh=MnFiajllb2RmZzVh" target="_blank">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.youtube.com/channel/UCaYSquOfBha6R5G0mMHQ8YA" target="_blank">
+        <i class="fab fa-youtube"></i>
+      </a>
+    </div>
+    
+    
+  
+    <div class="footer-container">
+      <div class="footer-column">
+        <h4>Know more about us</h4>
+        <p>BMU Campus</p>
+        <p>Zephyr as a team</p>
+        <p>Connect to us through social media.</p>
+        <p>Team collaboration</p>
+      </div>
+  
+      <div class="footer-column">
+        <h4>Explore</h4>
+        <p>Design</p>
+        <p>Prototyping</p>
+        <p>Development features</p>
+        <p>Design systems</p>
+        <p>Collaboration features</p>
+        <p>Design process</p>
+      </div>
+  
+      <div class="footer-column">
+        <h4>Resources</h4>
+        <p>Blog</p>
+        <p>Colors</p>
+        <p>Support</p>
+        <p>Developers</p>
+        <p>Resource library</p>
+      </div>
+    </div>
+  
+    <div class="bottom-bar">
+      <p>Copyright ©2025 Zephyr. All Rights Reserved.<br>
+      Privacy & Security | CA - Do Not Sell My Info | Site Map.</p>
+    </div>
+  </footer>
+
+  <script src="homepage.js"></script>
+</body>
+</html>
