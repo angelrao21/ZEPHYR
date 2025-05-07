@@ -1,0 +1,120 @@
+html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Zephyr Feedback</title>
+  <link rel="stylesheet" href="feedback.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <img src="IMG_4164 (1).PNG" alt="Zephyr Logo" class="logo-image">
+        <span>Zephyr</span>
+      </div>
+      
+      <div class="nav-links">
+        <a href="aboutus.html">About Us</a>
+        <a href="photogallery.html">Photos</a>
+        <a href="homepage.html">Home</a>
+      </div>
+
+      <button class="menu-btn">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="form-section">
+      <h1>Get in <span class="highlight">Touch</span></h1>
+      <p class="subtext">Your feedback helps us enhance the campus navigation experience.<br> Let us know what's working well and what can be improved!</p>
+      <form id="feedbackForm">
+        <input type="text" id="name" name="name" placeholder="Name *" required />
+        <input type="email" id="email" name="email" placeholder="Email" />
+        <textarea id="feedback" name="feedback" placeholder="Your Feedback *" required rows="4"></textarea>
+        <select id="find" name="find">
+          <option value="">How did you Find Us?</option>
+          <option value="social">Social Media</option>
+          <option value="friend">Friend</option>
+          <option value="college">College</option>
+          <option value="other">Other</option>
+        </select>
+        <button type="submit">SEND</button>
+      </form>
+
+      <div class="contact-info-row">
+        <div class="contact-item">
+          <p>📞 <span>+91 7655xxxxxx</span></p>
+        </div>
+        <div class="contact-item">
+          <p>Mail: <a href="https://mail.google.com/mail/?view=cm&fs=1&to=zephyrbmu@gmail.com">Zephyrbmu@gmail.com</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="map-section">
+      <div class="map-wrapper">
+        <img src="feedbackmap.jpeg" alt="Map placeholder" class="map-image"/>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="social-icons">
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=zephyrbmu@gmail.com" target="_blank">
+        <i class="fas fa-envelope"></i>
+      </a>
+      <a href="https://www.instagram.com/zephyr_bmu/" target="_blank">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.youtube.com/" target="_blank">
+        <i class="fab fa-youtube"></i>
+      </a>
+    </div>
+
+    <div class="footer-container">
+      <div class="footer-column">
+        <h4>Know more about us</h4>
+        <p>BMU Campus</p>
+        <p>Zephyr as a team</p>
+        <p>Connect to us through social media.</p>
+        <p>Team collaboration</p>
+      </div>
+
+      <div class="footer-column">
+        <h4>Explore</h4>
+        <p>Design</p>
+        <p>Prototyping</p>
+        <p>Development features</p>
+        <p>Design systems</p>
+        <p>Collaboration features</p>
+        <p>Design process</p>
+      </div>
+
+      <div class="footer-column">
+        <h4>Resources</h4>
+        <p>Blog</p>
+        <p>Colors</p>
+        <p>Support</p>
+        <p>Developers</p>
+        <p>Resource library</p>
+      </div>
+    </div>
+
+    <div class="bottom-bar">
+      <p>Copyright ©️2025 Zephyr. All Rights Reserved.<br>
+      Privacy & Security | CA - Do Not Sell My Info | Site Map.</p>
+    </div>
+  </footer>
+
+  <!-- Hidden download button -->
+  <!-- <button type="button" onclick="downloadAsExcel()" class="download-btn" style="display: none;">Download Feedback (Excel)</button> -->
+
+  <script src="feedback.js"></script>
+</body>
+</html>
