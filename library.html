@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Library - Zephyr</title>
+  <link rel="stylesheet" href="library.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <style>
+    #map {
+      height: 400px;
+      width: 100%;
+      margin-top: 20px ;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="top-nav">
+      <div class="logo-container">
+        <img src="logo.PNG" alt="Zephyr Logo" />
+        
+      </div>
+  
+      <div class="nav-right">
+        <div class="search-container">
+          <input type="text" placeholder="Library" />
+          <button><i class="fas fa-search"></i></button>
+        </div>
+        <div class="nav-links">
+          <a href="photogallery.html">Photos</a>
+          <a href="aboutus.html">About Us</a>
+          <a href="index.html">Home</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="gallery">
+    <img src="image 1.jpeg" alt="Library Image 1">
+    <img src="image 2.png" alt="Library Image 2">
+    <img src="image 3.png" alt="Library Image 3">
+  </section>
+
+  <div class="route-info">
+    <div class="route-section">
+        <div><strong>FROM</strong></div>
+        <div></div>
+        <div style="color: red;">current location</div>
+    </div>
+    <div class="route-section">
+        <div><strong>TO</strong></div>
+        <div>Library</div>
+        <div style="color: red;">(Near GB Building)</div>
+    </div>
+    <div class="route-section">
+        <div><strong>Preferred route</strong></div>
+        <div>
+            <input type="radio" name="route" checked> Shortest possible route
+  
+        </div>
+    </div>
+</div>
+
+  <section class="highlight">
+    <img src="highlight.png" alt="Library Highlight">
+    <div>
+      <h2>When in doubt, go to the library.</h2>
+    </div>
+  </section>
+
+  <section class="info-map">
+    <div class="library-details-container">
+        <div class="services-offered food-details">
+            <h4>Services Offered:</h4>
+            <ul>
+                <li>Book Issue and Return</li>
+                <li>Study Cabin Available</li>
+                <li>Online Catalogue Access</li>
+            </ul>
+        </div>
+
+        <div class="timings food-details">
+            <h4>Opening Time:</h4>
+            <p>Mon - Sun: 9:00 am to 1:30 pm</p>
+            <p>Mon - Sun: 9:00 am to 8:00 pm(Book return)</p>
+        </div>
+
+        <div class="contacts food-details">
+            <h4>Contact Info:</h4>
+            <p>Email: library@bml.edu.in</p>
+            <p>Phone: +91-124 2679002</p>
+        </div>
+    </div>
+     
+    <div class="map-container">
+      <div id="map"></div>
+      <div class="map-box">
+          <h3>Directions:</h3>
+          <p id="locationText">NEAR GB Building</p>
+          <button onclick="copyLocation()">Copy Location</button>
+      </div>
+  </div>
+  </section>
+
+  <section class="genres recommendations">
+    <h3>Genres Available</h3>
+    <div class="genre-items food-items">
+      <div><img src="dictionary.png" alt="Dictionaries"><p>Dictionaries</p></div>
+      <div><img src="fiction.png" alt="Fiction"><p>Fiction</p></div>
+      <div><img src="non fiction.png" alt="Non-Fiction"><p>Non-Fiction</p></div>
+      <div><img src="encyclopedia.png" alt="Encyclopedia"><p>Encyclopedia</p></div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="social-icons">
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=zephyrbmu@gmail.com" target="_blank">
+        <i class="fas fa-envelope"></i>
+      </a>
+      <a href="https://www.instagram.com/zephyrbmu?igsh=MnFiajllb2RmZzVh" target="_blank">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.youtube.com/channel/UCaYSquOfBha6R5G0mMHQ8YA" target="_blank">
+        <i class="fab fa-youtube"></i>
+      </a>
+    </div>
+    
+    
+  
+    <div class="footer-container">
+      <div class="footer-column">
+        <h4>Know more about us</h4>
+        <p>BMU Campus</p>
+        <p>Zephyr as a team</p>
+        <p>Connect to us through social media.</p>
+        <p>Team collaboration</p>
+      </div>
+  
+      <div class="footer-column">
+        <h4>Explore</h4>
+        <p>Design</p>
+        <p>Prototyping</p>
+        <p>Development features</p>
+        <p>Design systems</p>
+        <p>Collaboration features</p>
+        <p>Design process</p>
+      </div>
+  
+      <div class="footer-column">
+        <h4>Resources</h4>
+        <p>Blog</p>
+        <p>Colors</p>
+        <p>Support</p>
+        <p>Developers</p>
+        <p>Resource library</p>
+      </div>
+    </div>
+  
+    <div class="bottom-bar">
+      <p>Copyright ©2025 Zephyr. All Rights Reserved.<br>
+      Privacy & Security | CA - Do Not Sell My Info | Site Map.</p>
+    </div>
+  </footer>
+  <script>
+    function copyLocation() {
+      navigator.clipboard.writeText("Burger Singh BMU (In Between NB and Gateway Building)").then(() => {
+        alert("Location copied to clipboard!");
+      });
+    }
+
+    function initMap() {
+      const destination = {lat:28.24670072751176, lng:76.81449575174662}; // Burger Singh BMU
+      const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 15,
+        center: destination,
+      });
+
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(position => {
+          const origin = {
+            lat: position.coords.latitude,
+            lng: position.coords.longitude
+          };
+
+          // Add custom marker A for origin (Your Location)
+          new google.maps.Marker({
+            position: origin,
+            map: map,
+            label: {
+              text: "A",
+              color: "white",
+              fontSize: "16px"
+            },
+            icon: {
+              path: google.maps.SymbolPath.CIRCLE,
+              fillColor: "#4285F4",
+              fillOpacity: 1,
+              strokeWeight: 0,
+              scale: 12
+            }
+          });
+
+          // Add custom marker B for destination (Burger Singh)
+          new google.maps.Marker({
+            position: destination,
+            map: map,
+            label: {
+              text: "B",
+              color: "white",
+              fontSize: "16px"
+            },
+            icon: {
+              path: google.maps.SymbolPath.CIRCLE,
+              fillColor: "#4285F4",
+              fillOpacity: 1,
+              strokeWeight: 0,
+              scale: 12
+            }
+          });
+
+          const directionsService = new google.maps.DirectionsService();
+          const directionsRenderer = new google.maps.DirectionsRenderer({
+            suppressMarkers: true // This hides the default A/B markers
+          });
+          strokeColor: "#4285F4", // Google Maps blue color
+          directionsRenderer.setMap(map);
+
+          directionsService.route(
+            {
+              origin: origin,
+              destination: destination,
+              travelMode: 'WALKING',
+            },
+            (response, status) => {
+              if (status === 'OK') {
+                directionsRenderer.setDirections(response);
+              } else {
+                alert('Directions request failed due to ' + status);
+              }
+            }
+          );
+        }, () => {
+          alert("Failed to get current location.");
+        });
+      } else {
+        alert("Geolocation is not supported by this browser.");
+      }
+    }
+  </script>
+
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRi-qV-WNMxZEg95ORMx6CmHgEf6EyBao&callback=initMap">
+  </script>
+</body>
+</html>
