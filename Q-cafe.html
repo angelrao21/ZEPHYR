@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Q-cafe - Zephyr</title>
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="Q-cafe.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <style>
+    #map {
+      height: 400px;
+      width: 100%;
+      margin-top: 20px ;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="top-nav">
+      <div class="logo-container">
+        <img src="logo.PNG" alt="Zephyr Logo" />
+        
+      </div>
+  
+      <div class="nav-right">
+        <div class="search-container">
+          <input type="text" placeholder="Q-cafe" />
+          <button><i class="fas fa-search"></i></button>
+        </div>
+        <div class="nav-links">
+          <a href="photogallery.html">Photos</a>
+          <a href="aboutus.html">About Us</a>
+          <a href="index.html">Home</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+
+  <section class="gallery">
+    <img src="Q-cafeimg1.jpeg" alt="emergency spot Image 1">
+    <img src="Q-cafeimg2.jpeg" alt="emergency spot image 2">
+    <img src="Q-cafeimg3.jpeg" alt="emergency spot image 3">
+  </section>
+
+  <div class="route-info">
+    <div class="route-section">
+        <div><strong>FROM</strong></div>
+        <div style="color: red;">current location</div>
+    </div>
+    <div class="route-section">
+        <div><strong>TO</strong></div>
+        <div>Q-cafe</div>
+        <div style="color: red;">(Near Library)</div>
+    </div>
+    <div class="route-section">
+        <div><strong>Preferred route</strong></div>
+        <div>
+            <input type="radio" name="route" checked> Shortest possible route
+            
+        </div>
+    </div>
+</div>
+
+  <section class="highlight">
+    <img src="greybannerQcafe.jpg" alt="Emergency  Highlight">
+    <div>
+      <h2>"Q Café - A Bite for Every Craving."</h2>
+    </div>
+  </section>
+
+  <section class="info-map">
+    <div class="library-details-container">
+        <div class="services-offered food-details">
+            <h4>☕ Q-Café Timings</h4>
+            <ul>
+                <li>Open 7 days a week</li>
+                <li>Operating Hours: 10:00 AM - 9:30 PM</li>
+                <li>Great spot for lunch, dinner, or late-evening snacks</li>
+            </ul>
+        </div>
+
+        <div class="Timings food-details">
+            <h4>🍜 What's on the Menu?</h4>
+            <p>Chinese, North Indian, South Indian</p>
+            <p>Delicious donuts, pastries, and beverages</p>
+            <p>Freshly made meals for every mood</p>
+        </div>
+
+        <div class="contacts food-details">
+            <h4>🍽️ How It Works</h4>
+            <p>Self-service counter system</p>
+            <p>Just grab a tray, pick your favorites, and enjoy!</p>
+        </div>
+    </div>
+    <div class="map-container">
+      <div id="map"></div>
+      <div class="map-box">
+          <h3>Directions:</h3>
+          <p id="locationText">Right side of Library</p>
+          <button onclick="copyLocation()">Copy Location</button>
+      </div>
+  </div>
+</section>
+
+  <section class="recommendations">
+    <h3>Types of Food Provided</h3>
+    <div class="genre-items food-items">
+      <div><img src="chinese.jpeg" alt="Emergengy door for disable people"><p>Chinese</p></div>
+      <div><img src="southindian.jpeg" alt="High Voltage"><p>Pasteries</p></div>
+      <div><img src="cakesnpastries.jpeg" alt="Restricted Areas"><p>Sweet Delights</p></div>
+      <div><img src="northindian.jpeg" alt="Rescue Window"><p>North Indian</p></div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="social-icons">
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=zephyrbmu@gmail.com" target="_blank">
+        <i class="fas fa-envelope"></i>
+      </a>
+      <a href="https://www.instagram.com/zephyrbmu?igsh=MnFiajllb2RmZzVh" target="_blank">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.youtube.com/channel/UCaYSquOfBha6R5G0mMHQ8YA" target="_blank">
+        <i class="fab fa-youtube"></i>
+      </a>
+    </div>
+    
+    
+  
+    <div class="footer-container">
+      <div class="footer-column">
+        <h4>Know more about us</h4>
+        <p>BMU Campus</p>
+        <p>Zephyr as a team</p>
+        <p>Connect to us through social media.</p>
+        <p>Team collaboration</p>
+      </div>
+  
+      <div class="footer-column">
+        <h4>Explore</h4>
+        <p>Design</p>
+        <p>Prototyping</p>
+        <p>Development features</p>
+        <p>Design systems</p>
+        <p>Collaboration features</p>
+        <p>Design process</p>
+      </div>
+  
+      <div class="footer-column">
+        <h4>Resources</h4>
+        <p>Blog</p>
+        <p>Colors</p>
+        <p>Support</p>
+        <p>Developers</p>
+        <p>Resource library</p>
+      </div>
+    </div>
+  
+    <div class="bottom-bar">
+      <p>Copyright ©️2025 Zephyr. All Rights Reserved.<br>
+      Privacy & Security | CA - Do Not Sell My Info | Site Map.</p>
+    </div>
+  </footer>
+  <script>
+    function copyLocation() {
+      navigator.clipboard.writeText("Burger Singh BMU (In Between NB and Gateway Building)").then(() => {
+        alert("Location copied to clipboard!");
+      });
+    }
+
+    function initMap() {
+      const destination = {lat:28.24672052161731, lng:76.81398030474925}; // Burger Singh BMU
+      const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 15,
+        center: destination,
+      });
+
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(position => {
+          const origin = {
+            lat: position.coords.latitude,
+            lng: position.coords.longitude
+          };
+
+          // Add custom marker A for origin (Your Location)
+          new google.maps.Marker({
+            position: origin,
+            map: map,
+            label: {
+              text: "A",
+              color: "white",
+              fontSize: "16px"
+            },
+            icon: {
+              path: google.maps.SymbolPath.CIRCLE,
+              fillColor: "#4285F4",
+              fillOpacity: 1,
+              strokeWeight: 0,
+              scale: 12
+            }
+          });
+
+          // Add custom marker B for destination (Burger Singh)
+          new google.maps.Marker({
+            position: destination,
+            map: map,
+            label: {
+              text: "B",
+              color: "white",
+              fontSize: "16px"
+            },
+            icon: {
+              path: google.maps.SymbolPath.CIRCLE,
+              fillColor: "#4285F4",
+              fillOpacity: 1,
+              strokeWeight: 0,
+              scale: 12
+            }
+          });
+
+          const directionsService = new google.maps.DirectionsService();
+          const directionsRenderer = new google.maps.DirectionsRenderer({
+            suppressMarkers: true // This hides the default A/B markers
+          });
+          strokeColor: "#4285F4", // Google Maps blue color
+          directionsRenderer.setMap(map);
+
+          directionsService.route(
+            {
+              origin: origin,
+              destination: destination,
+              travelMode: 'WALKING',
+            },
+            (response, status) => {
+              if (status === 'OK') {
+                directionsRenderer.setDirections(response);
+              } else {
+                alert('Directions request failed due to ' + status);
+              }
+            }
+          );
+        }, () => {
+          alert("Failed to get current location.");
+        });
+      } else {
+        alert("Geolocation is not supported by this browser.");
+      }
+    }
+  </script>
+
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRi-qV-WNMxZEg95ORMx6CmHgEf6EyBao&callback=initMap">
+  </script>
+</body>
+</html>
