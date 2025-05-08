@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tower Mess</title>
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="towermess.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+  <style>
+    #map {
+      height: 400px;
+      width: 100%;
+      margin-top: 20px ;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="top-nav">
+      <div class="logo-container">
+        <img src="logo.PNG" alt="Zephyr Logo" />
+        
+      </div>
+  
+      <div class="nav-right">
+        <div class="search-container">
+          <input type="text" placeholder="Tower Mess" />
+          <button><i class="fas fa-search"></i></button>
+        </div>
+        <div class="nav-links">
+          <a href="photogallery.html">Photos</a>
+          <a href="aboutus.html">About Us</a>
+          <a href="index.html">Home</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+
+  <section class="gallery">
+    <img src="towermessimg1.jpeg" alt="emergency spot Image 1">
+    <img src="towermessimg2.jpeg" alt="emergency spot image 2">
+    <img src="towermessimg3.jpeg" alt="emergency spot image 3">
+  </section>
+
+  <div class="route-info">
+    <div class="route-section">
+        <div><strong>FROM</strong></div>
+        <div style="color: red;">current location</div>
+    </div>
+    <div class="route-section">
+        <div><strong>TO</strong></div>
+        <div>Tower Mess</div>
+        <div style="color: red;">(In Bhagat Singh Hostel)</div>
+    </div>
+    <div class="route-section">
+        <div><strong>Preferred route</strong></div>
+        <div>
+            <input type="radio" name="route" checked> Shortest possible route
+            
+        </div>
+    </div>
+</div>
+<section class="highlight">
+    <img src="messfood.avif" alt="Emergency  Highlight">
+    <div>
+      <h2>"Spicy? Bland? Who knows — it's mess o'clock!"</h2>
+    </div>
+  </section>
+
+  <section class="info-map">
+    <div class="library-details-container">
+        <div class="services-offered food-details">
+            <h4>🍽️ About the Mess:</h4>
+            <ul>
+                <li>Offers a huge variety of food daily.</li>
+                <li>Includes North Indian, South Indian (two different types), and other delicious options.</li>
+                <li>Uses Face Recognition for student entry — quick and secure!</li>
+                <li>Ensures hygiene and quality in every meal served.</li>
+            </ul>
+        </div>
+
+        <div class="Timings food-details">
+            <h4>🕒 Mess Timings:</h4>
+            <ul>
+              <li>Breakfast: 7:30 AM - 9:30 AM(for weekends 7:30AM-10:00AM)</li>
+              <li>Lunch: 12:30 PM - 2:30 PM</li>
+              <li>Snacks: 4:30 PM - 6:00 PM</li>
+              <li>Dinner: 7:30 PM - 9:30 PM(for weekends 7:30PM-10:00PM)</li>
+          </ul>
+            
+        </div>
+
+        <div class="contacts food-details">
+            <h4>Contact Info:</h4>
+            <h5>Hostel affairs Secretary</h5>
+            <p>Email: hostelaffairs.secretary@bmu.edu.in</p>
+            <p>Name: Aniruth Dattu</p>
+        </div>
+    </div>
+    <div class="map-container">
+      <div id="map"></div>
+      <div class="map-box">
+          <h3>Directions:</h3>
+          <p id="locationText">(In Bhagat Singh Hostel)</p>
+          <button onclick="copyLocation()">Copy Location</button>
+      </div>
+  </div>
+  </section>
+
+  
+  <section class="recommendations">
+    <h3>Food Provided</h3>
+    <div class="genre-items food-items">
+      <div><img src="breakfastfood.jpeg" alt="Lunch food"><p>Breakfast</p></div>
+      <div><img src="lunchfood.jpeg" alt="Breakfast food"><p>Lunch</p></div>
+      <div><img src="snacksfood.jpeg" alt="Breakfast food"><p>Snacks</p></div>
+      <div><img src="dinnerfood.jpeg" alt="Dinner food"><p>Dinner</p></div>
+    </div>
+  </section>
+
+
+  <footer>
+    <div class="social-icons">
+      <a href="mailto:zephyrbmu@gmail.com" target="_blank">
+        <i class="fas fa-envelope"></i>
+      </a>
+      <a href="https://www.instagram.com/zephyrbmu" target="_blank">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.youtube.com/channel/UCaYSquOfBha6R5G0mMHQ8YA" target="_blank">
+        <i class="fab fa-youtube"></i>
+      </a>
+    </div>
+    
+    
+  
+    <div class="footer-container">
+      <div class="footer-column">
+        <h4>Know more about us</h4>
+        <p>BMU Campus</p>
+        <p>Zephyr as a team</p>
+        <p>Connect to us through social media.</p>
+        <p>Team collaboration</p>
+      </div>
+  
+      <div class="footer-column">
+        <h4>Explore</h4>
+        <p>Design</p>
+        <p>Prototyping</p>
+        <p>Development features</p>
+        <p>Design systems</p>
+        <p>Collaboration features</p>
+        <p>Design process</p>
+      </div>
+  
+      <div class="footer-column">
+        <h4>Resources</h4>
+        <p>Blog</p>
+        <p>Colors</p>
+        <p>Support</p>
+        <p>Developers</p>
+        <p>Resource library</p>
+      </div>
+    </div>
+  
+    <div class="bottom-bar">
+      <p>Copyright ©️2025 Zephyr. All Rights Reserved.<br>
+      Privacy & Security | CA - Do Not Sell My Info | Site Map.</p>
+    </div>
+  </footer>
+
+  <script>
+    function copyLocation() {
+      navigator.clipboard.writeText("In Bhagat Singh Hostel").then(() => {
+        alert("Location copied to clipboard!");
+      });
+    }
+
+    function initMap() {
+      const destination = {lat:28.24647880804614, lng:76.8120772975239 }; // tower mess
+      const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 15,
+        center: destination,
+      });
+
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(position => {
+          const origin = {
+            lat: position.coords.latitude,
+            lng: position.coords.longitude
+          };
+
+          // Add custom marker A for origin (Your Location)
+          new google.maps.Marker({
+            position: origin,
+            map: map,
+            label: {
+              text: "A",
+              color: "white",
+              fontSize: "16px"
+            },
+            icon: {
+              path: google.maps.SymbolPath.CIRCLE,
+              fillColor: "#4285F4",
+              fillOpacity: 1,
+              strokeWeight: 0,
+              scale: 12
+            }
+          });
+
+          // Add custom marker B for destination (tower mess)
+          new google.maps.Marker({
+            position: destination,
+            map: map,
+            label: {
+              text: "B",
+              color: "white",
+              fontSize: "16px"
+            },
+            icon: {
+              path: google.maps.SymbolPath.CIRCLE,
+              fillColor: "#4285F4",
+              fillOpacity: 1,
+              strokeWeight: 0,
+              scale: 12
+            }
+          });
+
+          const directionsService = new google.maps.DirectionsService();
+          const directionsRenderer = new google.maps.DirectionsRenderer({
+            suppressMarkers: true // This hides the default A/B markers
+          });
+          strokeColor: "#4285F4", // Google Maps blue color
+          directionsRenderer.setMap(map);
+
+          directionsService.route(
+            {
+              origin: origin,
+              destination: destination,
+              travelMode: 'WALKING',
+            },
+            (response, status) => {
+              if (status === 'OK') {
+                directionsRenderer.setDirections(response);
+              } else {
+                alert('Directions request failed due to ' + status);
+              }
+            }
+          );
+        }, () => {
+          alert("Failed to get current location.");
+        });
+      } else {
+        alert("Geolocation is not supported by this browser.");
+      }
+    }
+  </script>
+
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRi-qV-WNMxZEg95ORMx6CmHgEf6EyBao&callback=initMap">
+  </script>
+
+</body>
+</html>
