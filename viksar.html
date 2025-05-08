@@ -1,0 +1,126 @@
+<!-- Save as: homibhabhahostel.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Homi Bhabha Hostel - Zephyr</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="viksar.css" />
+</head>
+<body>
+  <header>
+    <div class="top-nav">
+      <div class="logo-container">
+        <img src="IMG_4164 (1).PNG" alt="Zephyr Logo" />
+      </div>
+      <div class="nav-right">
+        <div class="search-container">
+          <input type="text" placeholder="Search for locations..." />
+          <button><i class="fas fa-search"></i></button>
+        </div>
+        <div class="nav-links">
+          <a href="photogallery.html">Photos</a>
+          <a href="aboutus.html">About Us</a>
+          <a href="index.html">Home</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="gallery">
+    <img src="viksar.JPG" alt="Homi Bhabha Hostel 1">
+    <img src="ground.jpg" alt="Homi Bhabha Hostel 2">
+    <img src="smoothie.jpg" alt="Homi Bhabha Hostel 3">
+  </section>
+
+  <div class="route-info">
+    <div class="route-section">
+      <div><strong>FROM</strong></div>
+      <div>Gargi hostel</div>
+      <div style="color: red;">current location</div>
+    </div>
+    <div class="route-section">
+      <div><strong>TO</strong></div>
+      <div>Homi Bhabha Hostel</div>
+      <div style="color: red;">(Boys Hostel)</div>
+    </div>
+    <div class="route-section">
+      <div><strong>Preferred route</strong></div>
+      <div>
+        <input type="radio" name="route" checked> Shortest
+        <input type="radio" name="route"> Peaceful
+      </div>
+    </div>
+  </div>
+
+  <section class="highlight">
+    <img src="hostelhighlight.jpg" alt="Hostel Highlight">
+    <div>
+      <h2>"Your second home at BMU."</h2>
+    </div>
+  </section>
+
+  <section class="info-map">
+    <div class="library-details-container">
+      <div class="services-offered">
+        <h4>Room Features:</h4>
+        <ul>
+          <li>AC & Non-AC Options</li>
+          <li>Attached Washrooms</li>
+          <li>Study Desks & Wardrobes</li>
+          <li>WiFi Connectivity</li>
+        </ul>
+      </div>
+
+      <div class="Timings">
+        <h4>Hostel Timings</h4>
+        <p>Entry till 1:30 AM (Weekdays)</p>
+        <p>Flexible on Weekends with Pass</p>
+      </div>
+
+      <div class="contacts">
+        <h4>Warden Contact</h4>
+        <p>Email: sarabhai.hostel@bmu.edu.in</p>
+        <p>Phone: +91-9812345670</p>
+      </div>
+    </div>
+
+    <div class="map-box">
+      <h3>Location:</h3>
+      <iframe src="https://maps.google.com/maps?q=BML%20Munjal%20University&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0"></iframe>
+      <p id="locationText" style="margin: 10px 0; font-weight: bold;">
+        Located near Smoothie zone
+      </p>
+      <button onclick="copyLocation()" style="width: 100%;">Copy Location</button>
+    </div>
+  </section>
+
+  <section class="recommendations">
+    <h3>Nearby Facilities</h3>
+    <div class="genre-items">
+      <div><img src="laundry.png" alt="Laundry"><p>Laundry Room</p></div>
+      <div><img src="mess.png" alt="Mess"><p>North Mess</p></div>
+      <div><img src="gym.png" alt="Gym"><p>Student Gym</p></div>
+      <div><img src="commonroom.png" alt="Common Room"><p>Common Area</p></div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="social-icons">
+      <a href="mailto:zephyrbmu@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+      <a href="https://www.instagram.com/zephyrbmu" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.youtube.com/channel/UCaYSquOfBha6R5G0mMHQ8YA" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+    <div class="footer-container">
+      <div class="footer-column"><h4>About Us</h4><p>Team Zephyr, BMU</p></div>
+      <div class="footer-column"><h4>Explore</h4><p>Design. Navigation. Tech.</p></div>
+      <div class="footer-column"><h4>Resources</h4><p>Support. FAQs. Blog.</p></div>
+    </div>
+    <div class="bottom-bar">
+      <p>©2025 Zephyr. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="viksar.js"></script>
+</body>
+</html>
